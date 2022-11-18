@@ -3,6 +3,8 @@
  * @author Fikri Rahmat Nurhidayat
  */
 
+const { sequelize } = require("../app/models");
+
 /** Destruct environment variable to get database configuration */
 const {
     DB_USERNAME = "postgres",
@@ -10,6 +12,13 @@ const {
         DB_HOST = "127.0.0.1",
         DB_NAME = "challenge_6",
 } = process.env;
+
+const db = new sequelize(DB_URL, {
+    define : {
+        timestaps : false
+    }
+});
+module.exports = db
 
 module.exports = {
     development: {
@@ -33,4 +42,5 @@ module.exports = {
         host: DB_HOST,
         dialect: "postgres",
     },
+
 };
