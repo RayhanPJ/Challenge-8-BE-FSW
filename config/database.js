@@ -6,9 +6,9 @@
 /** Destruct environment variable to get database configuration */
 const {
     PGUSER = "postgres",
-    PGPASSWORD = "ARKrMINpPxDBVJxDTh7p",
-    PGHOST = "containers-us-west-128.railway.app",  
-    PGPORT = "5581",
+    PGPASSWORD = "qWS23Wf5rXlJzsFZYAi6",
+    PGHOST = "containers-us-west-115.railway.app",  
+    PGPORT = "6100",
     DB_NAME = "railway"
 
 } = process.env;
