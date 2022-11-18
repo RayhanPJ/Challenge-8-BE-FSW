@@ -5,32 +5,45 @@
 
 /** Destruct environment variable to get database configuration */
 const {
-    DB_USERNAME = "postgres",
-        DB_PASSWORD = "12345",
-        DB_HOST = "127.0.0.1",
-        DB_NAME = "challenge_6",
+    PGUSER = "postgres",
+    PGPASSWORD = "ARKrMINpPxDBVJxDTh7p",
+    PGHOST = "containers-us-west-128.railway.app",
+    DATABSE_URL = "postgresql://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}",
+    PGDATABSE = "railway",
+    PGPORT = "5581",
+    DB_NAME = "challenge_6"
+
 } = process.env;
 
 module.exports = {
     development: {
-        username: DB_USERNAME,
-        password: DB_PASSWORD,
-        database: `${DB_NAME}_development`,
-        host: DB_HOST,
+        username: PGUSER,
+        password: PGPASSWORD,
+        database: DB_NAME,
+        host: PGHOST,
+        port: PGPORT,
+        pgdatabase : PGDATABSE,
+        databaseurl : DATABSE_URL,
         dialect: "postgres",
     },
     test: {
-        username: DB_USERNAME,
-        password: DB_PASSWORD,
-        database: `${DB_NAME}_test`,
-        host: DB_HOST,
+        username: PGUSER,
+        password: PGPASSWORD,
+        database: DB_NAME,
+        host: PGHOST,
+        port: PGPORT,
+        pgdatabase : PGDATABSE,
+        databaseurl : DATABSE_URL,
         dialect: "postgres",
     },
     production: {
-        username: DB_USERNAME,
-        password: DB_PASSWORD,
-        database: `${DB_NAME}_production`,
-        host: DB_HOST,
+        username: PGUSER,
+        password: PGPASSWORD,
+        database: DB_NAME,
+        host: PGHOST,
+        port: PGPORT,
+        pgdatabase : PGDATABSE,
+        databaseurl : DATABSE_URL,
         dialect: "postgres",
     },
 };
