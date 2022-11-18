@@ -4,7 +4,7 @@
  */
 
 const { sequelize } = require("../app/models");
-
+const Sequelize = require('sequelize');
 /** Destruct environment variable to get database configuration */
 const {
     DB_USERNAME = "postgres",
