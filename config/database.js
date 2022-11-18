@@ -7,11 +7,9 @@
 const {
     PGUSER = "postgres",
     PGPASSWORD = "ARKrMINpPxDBVJxDTh7p",
-    PGHOST = "containers-us-west-128.railway.app",
-    DATABSE_URL = "postgresql://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}",
-    PGDATABSE = "railway",
+    PGHOST = "containers-us-west-128.railway.app",  
     PGPORT = "5581",
-    DB_NAME = "challenge_6"
+    DB_NAME = "railway"
 
 } = process.env;
 
@@ -22,8 +20,6 @@ module.exports = {
         database: DB_NAME,
         host: PGHOST,
         port: PGPORT,
-        pgdatabase : PGDATABSE,
-        databaseurl : DATABSE_URL,
         dialect: "postgres",
     },
     test: {
@@ -32,8 +28,6 @@ module.exports = {
         database: DB_NAME,
         host: PGHOST,
         port: PGPORT,
-        pgdatabase : PGDATABSE,
-        databaseurl : DATABSE_URL,
         dialect: "postgres",
     },
     production: {
@@ -42,8 +36,6 @@ module.exports = {
         database: DB_NAME,
         host: PGHOST,
         port: PGPORT,
-        pgdatabase : PGDATABSE,
-        databaseurl : DATABSE_URL,
         dialect: "postgres",
     },
 };
