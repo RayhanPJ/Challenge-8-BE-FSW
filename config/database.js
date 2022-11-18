@@ -13,11 +13,11 @@ const {
         DB_NAME = "challenge_6",
 } = process.env;
 
-const db = new sequelize(DB_URL, {
-    define : {
-        timestaps : false
+const db = new Sequelize(DB_URL, {
+    define: {
+      timestamps: false
     }
-});
+  });
 module.exports = db
 
 module.exports = {
